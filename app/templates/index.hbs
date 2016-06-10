@@ -1,10 +1,12 @@
 <h1>Appa Chat</h1>
 <h3>Chat yourself in the face!</h3>
 
-<ul>
+<div class="commentBox">
   {{#each model as |comment|}}
-    {{comment-tile comment=comment}}
+    {{comment-tile comment=comment destroyComment="destroyComment"}}
   {{/each}}
-</ul>
+</div>
+
+{{new-comment save2="save3"}}
 
 {{#link-to 'index'}}Home{{/link-to}} | {{#link-to 'about'}}About{{/link-to}} | {{#link-to 'contact'}}Contact{{/link-to}}

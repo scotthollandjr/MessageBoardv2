@@ -1,4 +1,6 @@
-<li>
+<div>
   <p>{{comment.date}}</p>
   <p>{{comment.username}}: {{comment.content}}</p>
-</li>
+  <button {{action 'delete' comment}}>Delete</button>
+  <hr>
+</div>
