@@ -1,0 +1,21 @@
+{{#if addNewQuestion}}
+<div>
+  <form>
+    <div class="form-group">
+      {{input value=username id="username" placeholder="Username:"}}
+    </div>
+
+    <div class="form-group">
+      {{input value=subject id="subject" placeholder="Subject/Title:"}}
+    </div>
+
+    <div class="form-group">
+      {{input value=content id="content" placeholder="Your Question:"}}
+    </div>
+
+    <button {{action 'saveQuestion'}}>Save</button>
+  </form>
+</div>
+{{else}}
+  <button {{action 'questionFormShow'}}>New Question!</button>
+{{/if}}

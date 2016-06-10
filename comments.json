@@ -10,5 +10,10 @@
   "username": "severilous",
   "content": "DEVILS!",
   "date": "12/05/14"
-  }]
+  }],
+  "questions": [{
+    "subject": "JSON/JS error",
+    "username": "theAppanaut",
+    "content": "Why do I get this error when I try to compile blah blah something?"
+    }]
 }
