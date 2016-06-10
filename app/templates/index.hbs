@@ -14,10 +14,5 @@
 
 {{new-question saveQuestion="saveQuestion"}}
 
-<div class="commentBox">
-  {{#each model.comments as |comment|}}
-    {{comment-tile comment=comment update="update" destroyComment="destroyComment"}}
-  {{/each}}
-</div>
 
 {{#link-to 'index'}}Home{{/link-to}} | {{#link-to 'about'}}About{{/link-to}} | {{#link-to 'contact'}}Contact{{/link-to}}

@@ -1,5 +1,11 @@
 <h1>{{model.subject}}</h1>
 
-{{new-comment save2="save3" question=model}}
+{{question-tile question=question}}
 
-{{question-tile question=model}}
+<div class="commentBox">
+  {{#each model.comments as |comment|}}
+    {{comment-tile comment=comment update="update" destroyComment="destroyComment"}}
+  {{/each}}
+</div>
+
+{{new-comment save2="save3" question=model}}
