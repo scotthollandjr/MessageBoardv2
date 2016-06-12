@@ -1,11 +1,5 @@
 <h1>{{model.subject}}</h1>
 
-{{question-tile question=question}}
-
-<div class="commentBox">
-  {{#each model.comments as |comment|}}
-    {{comment-tile comment=comment update="update" destroyComment="destroyComment"}}
-  {{/each}}
-</div>
+{{question-tile question=model}}
 
 {{new-comment save2="save3" question=model}}

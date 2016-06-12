@@ -4,3 +4,9 @@
   <p>{{question.content}}</p>
   <button {{action 'delete' question}}>Delete</button>
 </div>
+
+<div class="commentBox">
+  {{#each question.comments as |comment|}}
+    {{comment-tile comment=comment update="update" destroyComment="destroyComment"}}
+  {{/each}}
+</div>

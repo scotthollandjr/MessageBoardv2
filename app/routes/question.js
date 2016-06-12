@@ -9,11 +9,12 @@ export default Ember.Route.extend({
     save3(params) {
       var newComment = this.store.createRecord('comment', params);
       var question = params.question;
+      debugger;
       question.get('comments').addObject(newComment);
       newComment.save().then(function() {
         return question.save();
       });
-      this.transitionTo('index');
+      this.transitionTo('question', params.question);
     },
 
     update(comment, params) {
@@ -33,12 +34,6 @@ export default Ember.Route.extend({
       Ember.RSVP.all(comment_deletions).then(function() {
         return question.destroyRecord();
       });
-      this.transitionTo('index');
-    },
-
-    save3(params) {
-      var newComment = this.store.createRecord('comment', params);
-      newComment.save();
       this.transitionTo('index');
     },
 
