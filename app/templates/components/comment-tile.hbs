@@ -1,7 +1,21 @@
 <div>
   <p>{{comment.date}}</p>
   <p>{{comment.username}}: {{comment.content}}</p>
-  {{update-comment comment=comment update="update"}}
+
+  {{#if updateCommentForm}}
+    <h4>Update comment</h4>
+    <div>
+      <form>
+        <div class="form-group">
+          {{input value=content id="content" placeholder="Comment:"}}
+        </div>
+        <button {{action 'update' comment}}>Save</button>
+      </form>
+    </div>
+  {{else}}
+    <button {{action 'updateCommentForm'}}>Update</button>
+  {{/if}}
+
   <button {{action 'delete' comment}}>Delete</button>
   <hr>
 </div>
