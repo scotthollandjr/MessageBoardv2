@@ -5,6 +5,12 @@ export default Ember.Component.extend({
     update(comment, params) {
       this.sendAction('update', comment, params);
     },
+    upvote(comment) {
+      this.sendAction('upvote', comment);
+    },
+    downvote(comment) {
+      this.sendAction('downvote', comment);
+    },
     delete(comment) {
       if (confirm("Are you sure you'd like to delete this comment?")) {
         this.sendAction('destroyComment', comment);

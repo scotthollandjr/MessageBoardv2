@@ -7,7 +7,7 @@
 
 <div class="commentBox">
   {{#each model.comments as |comment|}}
-    {{comment-tile comment=comment update="update" destroyComment="destroyComment"}}
+    {{comment-tile comment=comment update="update" upvote="upvote" downvote="downvote" destroyComment="destroyComment"}}
   {{/each}}
 </div>
 

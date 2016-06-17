@@ -26,6 +26,15 @@ export default Ember.Route.extend({
       this.transitionTo('index');
     },
 
+    upvote(comment) {
+      var score = comment.get('score');
+      var newScore = score += 1;
+      comment.set('score', newScore);
+      comment.save();
+      console.log(newScore);
+      this.transitionTo('index');
+    },
+
     destroyQuestion(question) {
       var comment_deletions = question.get('comments').map(function(comment) {
         return comment.destroyRecord();
