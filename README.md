@@ -46,9 +46,8 @@ Make use of the many generators for code, try `ember help generate` for more det
 * [ember-cli](http://ember-cli.com/)
 * Development Browser Extensions
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/).
 
+### License
 
-  #### License
-
-  MIT License. Copyright (c) 2016 **_Scott Holland, Jr._**
+MIT License. Copyright (c) 2016 **_Scott Holland, Jr._**
