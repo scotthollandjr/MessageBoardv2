@@ -11,14 +11,13 @@ export default Ember.Component.extend({
       var params = {
         username: this.get('username'),
         content: this.get('content'),
-        date: this.get('date'),
+        date: moment().format('MMMM Do YYYY, h:mm:ss a'),
         question: this.get('question')
       };
       this.set('addNewComment', false);
       this.sendAction('save2', params);
       this.set('username', "");
       this.set('content', "");
-      this.set('date', "");
     }
   }
 });

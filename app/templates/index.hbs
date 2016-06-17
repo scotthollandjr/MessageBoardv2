@@ -6,7 +6,7 @@
   {{#each model.questions as |question|}}
     <li>
       {{#link-to 'question' question.id}}
-        {{question.subject}}
+        {{question.subject}} - {{time-stamp question}} {{answered question}}
       {{/link-to}}
     </li>
   {{/each}}
