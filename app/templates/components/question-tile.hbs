@@ -1,3 +1,8 @@
+<p>Comment of the year:</p>
+{{#each bestQuestion.comments as |comment|}}
+  <p>{{comment.username}}: {{comment.content}}</p>
+{{/each}}
+
 <div>
   {{time-stamp question}}
   <p>{{question.subject}}</p>
@@ -5,7 +10,6 @@
   <p>{{question.content}}</p>
   <button {{action 'delete' question}}>Delete</button>
 </div>
-
 
 <div class="commentBox">
   {{#each sortedComments as |comment|}}

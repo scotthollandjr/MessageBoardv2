@@ -1,6 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  bestQuestion: Ember.inject.service(),
+
   currentScore: Ember.computed('comment.score', function() {
     return this.comment.get('score') + ' points';
   }),
@@ -29,6 +31,9 @@ export default Ember.Component.extend({
       };
       this.set('updateCommentForm', false);
       this.sendAction('update', comment, params);
+    },
+    voteBest(comment) {
+      this.get('bestQuestion').voteBest(comment);
     }
   }
 });
