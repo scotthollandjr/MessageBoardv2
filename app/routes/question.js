@@ -23,7 +23,7 @@ export default Ember.Route.extend({
         }
       });
       comment.save();
-      this.transitionTo('index');
+      this.transitionTo('question', this.question);
     },
 
     upvote(comment) {
@@ -31,8 +31,15 @@ export default Ember.Route.extend({
       var newScore = score += 1;
       comment.set('score', newScore);
       comment.save();
-      console.log(newScore);
-      this.transitionTo('index');
+      this.transitionTo('question', this.question);
+    },
+
+    downvote(comment) {
+      var score = comment.get('score');
+      var newScore = score -= 1;
+      comment.set('score', newScore);
+      comment.save();
+      this.transitionTo('question', this.question);
     },
 
     destroyQuestion(question) {
@@ -47,7 +54,7 @@ export default Ember.Route.extend({
 
     destroyComment(comment) {
       comment.destroyRecord();
-      this.transitionTo('index');
+      this.transitionTo('question', this.question);
     }
   }
 

@@ -1,6 +1,10 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  currentScore: Ember.computed('comment.score', function() {
+    return this.comment.get('score') + ' points';
+  }),
+
   actions: {
     update(comment, params) {
       this.sendAction('update', comment, params);

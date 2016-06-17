@@ -5,3 +5,10 @@
   <p>{{question.content}}</p>
   <button {{action 'delete' question}}>Delete</button>
 </div>
+
+
+<div class="commentBox">
+  {{#each sortedComments as |comment|}}
+    {{comment-tile comment=comment update="update" upvote="upvote" downvote="downvote" destroyComment="destroyComment"}}
+  {{/each}}
+</div>

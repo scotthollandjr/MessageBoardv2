@@ -1,5 +1,6 @@
-<div>
+<div class="{{hide-trolls comment.score}}">
   <p>{{comment.date}}</p>
+  {{currentScore}}
   <p>{{comment.username}}: {{comment.content}}</p>
   <button {{action 'upvote' comment}}>upvote</button>
   <button {{action 'downvote' comment}}>downvote</button>

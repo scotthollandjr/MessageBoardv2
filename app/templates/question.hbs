@@ -1,14 +1,9 @@
 <h1>{{model.subject}}</h1>
 
-{{question-tile question=model destroyQuestion="destroyQuestion"}}
+{{question-tile question=model destroyQuestion="destroyQuestion" comment=comment update="update" upvote="upvote" downvote="downvote" destroyComment="destroyComment"}}
 <!--
 {{update-comment update="update" destroyComment="destroyComment"}} -->
 
-
-<div class="commentBox">
-  {{#each model.comments as |comment|}}
-    {{comment-tile comment=comment update="update" upvote="upvote" downvote="downvote" destroyComment="destroyComment"}}
-  {{/each}}
-</div>
+{{comment-count}}
 
 {{new-comment save2="save3" question=model}}
