@@ -1,12 +1,13 @@
-<h2>Questions</h2>
-<ul>
-  {{#each model.questions as |question|}}
-    <li>
-      {{#link-to 'question' question.id}}
-        {{question.subject}} - {{time-stamp question}} {{answered question}}
-      {{/link-to}}
-    </li>
-  {{/each}}
-</ul>
+<ul class="collection with-header">
+   <li class="collection-header"><h4>Questions</h4></li>
+   {{#each model.questions as |question|}}
+     <li class="collection-item">
+       {{#link-to 'question' question.id}}
+         {{question.subject}} - {{time-stamp question}}
+         <a href="#!" class="secondary-content">{{answered question}}</a>
+       {{/link-to}}
+     </li>
+   {{/each}}
+ </ul>
 
 {{new-question saveQuestion="saveQuestion"}}
