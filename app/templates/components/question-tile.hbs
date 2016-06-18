@@ -1,14 +1,18 @@
-<p>Comment of the year:</p>
-{{#each bestQuestion.comments as |comment|}}
-  <p>{{comment.username}}: {{comment.content}}</p>
-{{/each}}
+<p>
+  Comment of the year:
+  {{#each bestQuestion.comments as |comment|}}
+    <span class="bestComment">
+      {{comment.username}}: {{comment.content}}
+    </span>
+  {{/each}}
+</p>
 
+<h4>Subject: {{question.subject}}</h4>
 <div>
-  {{time-stamp question}}
-  <p>{{question.subject}}</p>
-  <p>{{question.username}}</p>
-  <p>{{question.content}}</p>
-  <button {{action 'delete' question}}>Delete</button>
+  <p>On {{time-stamp question}}</p>
+  <h5>{{question.username}} asked:</h5>
+  <h4>{{question.content}}</h4>
+  <button class="btn indigo lighten-2" {{action 'delete' question}}>Delete</button>
 </div>
 
 <div class="commentBox">

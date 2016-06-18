@@ -1,8 +1,15 @@
-<h2 id="title">Welcome to Ember</h2>
+<nav class="indigo lighten-2">
+  <div class="nav-wrapper">
+    <a href="/" class="brand-logo">Ask Appa</a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li><a href="/">Home</a></li>
+    </ul>
+  </div>
+</nav>
 
+<div class="container">
 {{outlet}}
 
 {{!-- ember-cli-materialize modal container --}}
 {{md-modal-container}}
-
-{{#link-to 'index'}}Home{{/link-to}}
+</div>

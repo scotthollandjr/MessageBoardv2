@@ -1,3 +1,4 @@
+<hr>
 {{#if addNewComment}}
 <div>
   <form>
@@ -9,9 +10,10 @@
       {{input value=content id="content" placeholder="Comment:"}}
     </div>
 
-    <button {{action 'save1'}}>Save</button>
+    <button class="btn indigo lighten-2" {{action 'save1'}}>Save</button>
   </form>
 </div>
 {{else}}
-  <button {{action 'commentFormShow'}}>New Comment!</button>
+  <h5>Add a comment!</h5>
+  <button class="btn indigo lighten-2" {{action 'commentFormShow'}}>Add</button>
 {{/if}}

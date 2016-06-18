@@ -13,7 +13,7 @@ export default Ember.Component.extend({
         username: this.get('username'),
         subject: this.get('subject'),
         content: this.get('content'),
-        date: moment().format('MMMM Do YYYY, h:mm:ss a')
+        date: moment().format('MMMM Do YYYY, h:mma')
       };
       this.set('addNewQuestion', false);
       this.sendAction('saveQuestion', params);
