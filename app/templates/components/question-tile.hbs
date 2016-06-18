@@ -1,11 +1,17 @@
-<p>
-  Comment of the year:
-  {{#each bestQuestion.comments as |comment|}}
-    <span class="bestComment">
-      {{comment.username}}: {{comment.content}}
-    </span>
-  {{/each}}
-</p>
+<div class="row">
+  <div class="col s12 m5">
+    <div class="card-panel cyan accent-1">
+      <span>
+        <p>Comment of the year:</p>
+        {{#each bestQuestion.comments as |comment|}}
+          <h5>
+            {{comment.username}}: {{comment.content}}
+          </h5>
+        {{/each}}
+      </span>
+    </div>
+  </div>
+</div>
 
 <h4>Subject: {{question.subject}}</h4>
 <div>
