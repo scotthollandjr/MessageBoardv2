@@ -1,9 +1,10 @@
 import Ember from 'ember';
 
 export default Ember.Service.extend({
-  comments: [],
-  voteBest(comments) {
+  commentsArr: [],
+
+  voteBest(comment) {
     this.get('comments').pop();
-    this.get('comments').pushObject(comments);
+    this.get('comments').pushObject(comment);
   }
 });

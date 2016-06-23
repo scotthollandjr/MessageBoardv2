@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   bestQuestion: Ember.inject.service(),
-  
+
   sortBy: ['score:desc'],
   sortedComments: Ember.computed.sort('question.comments', 'sortBy'),
 

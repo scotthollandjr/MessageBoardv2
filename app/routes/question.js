@@ -5,6 +5,8 @@ export default Ember.Route.extend({
     return this.store.findRecord('question', params.question_id);
   },
 
+  bestQuestion: Ember.inject.service(),
+
   actions: {
     save3(params) {
       var newComment = this.store.createRecord('comment', params);
