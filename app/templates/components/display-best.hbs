@@ -1,0 +1,6 @@
+<p>Comment of the year:</p>
+{{#each bestQuestion.commentsArr as |comment|}}
+  <h5>
+    {{comment.username}}: {{comment.content}}
+  </h5>
+{{/each}}

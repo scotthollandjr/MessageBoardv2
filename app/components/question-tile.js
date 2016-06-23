@@ -12,9 +12,6 @@ export default Ember.Component.extend({
         this.sendAction('destroyQuestion', question);
       }
     },
-    update(comment, params) {
-      this.sendAction('update', comment, params);
-    },
     upvote(comment) {
       this.sendAction('upvote', comment);
     },
@@ -29,6 +26,9 @@ export default Ember.Component.extend({
     },
     update(comment, params) {
       this.sendAction('update', comment, params);
+    },
+    add(comment) {
+      this.get('bestQuestion').add(comment);
     }
   }
 });
